@@ -28,13 +28,11 @@ public class AddressBookManager {
         books.put(name,addname);
     }
 
-   public AddressBook remove(String name) {
-        AddressBook book=null;
-        if (books.containsKey(name)) {
-           books.remove(name) ;
-            return book;
-        }
-        return null;
+  public AddressBook remove(String name) {
+        AddressBook book = null;
+        book = books.get(name);
+        books.remove(name);
+        return book;
     }
 
     public void printAll() {
