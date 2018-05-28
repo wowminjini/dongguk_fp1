@@ -28,7 +28,11 @@ public class AddressBookManager {
         books.put(name,addname);
     }
 
+<<<<<<< HEAD
     public AddressBook remove(String name) {
+=======
+  public AddressBook remove(String name) {
+>>>>>>> 73dc340469a7dfb2af5f73f1d507fb4e11bd0324
         AddressBook book = null;
         book = books.get(name);
         books.remove(name);
