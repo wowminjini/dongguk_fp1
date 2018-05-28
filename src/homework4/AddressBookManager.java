@@ -30,11 +30,13 @@ public class AddressBookManager {
 
     public AddressBook remove(String name) {
         AddressBook book=null;
-        book=books.get(name);
-        books.remove(name);
-        return book;
-
+        if (books.containsKey(name)) {
+           books.remove(name) ;
+            return book;
+        }
+        return null;
     }
+
 
     public void printAll() {
         for(String abc : books.keySet()) {
