@@ -29,13 +29,12 @@ public class AddressBookManager {
     }
 
     public AddressBook remove(String name) {
-        AddressBook book=null;
-        if (books.containsKey(name)) {
-           books.remove(name) ;
-            return book;
-        }
-        return null;
+        AddressBook book = null;
+        book = books.get(name);
+        books.remove(name);
+        return book;
     }
+
 
 
     public void printAll() {
@@ -45,14 +44,14 @@ public class AddressBookManager {
     }
 
     public AddressBook findByName (String name) {
-            AddressBook book = null;
-            if (books.containsKey(name)) {
-                book=books.get(name);
-                return book;
-            }
-            return null;
-
+        AddressBook book = null;
+        if (books.containsKey(name)) {
+            book=books.get(name);
+            return book;
         }
+        return null;
+
+    }
 
     public static void showMenu() {
         System.out.println("===== Menu =====");
